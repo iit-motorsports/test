@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: page
+spec:
+  id: TQtJjOt
+  title: Default page
+  display: standalone
+  content:
+    - component: Text
+      name: title
+      props:
+        variant: h1
+        value: Resistor Calculator
+        loading: false
+    - component: Paper
+      name: paper
+      children:
+        - component: Text
+          name: vehicle_attributes
+          props:
+            variant: h4
+            value: Vehicle Attributes
+        - component: PageRow
+          name: pageRow
+          props:
+            justifyContent: start
+          children:
+            - component: PageColumn
+              name: pageColumn
+              layout:
+                columnSize: 1
+              children:
+                - component: PageRow
+                  name: pageRow1
+                  props:
+                    justifyContent: start
+                  children:
+                    - component: TextField
+                      name: max_ts
+                      layout:
+                        horizontalAlign: start
+                        verticalAlign: start
+                      props:
+                        placeholder: Maximum TS Voltage
+                        label: Max TS Voltage
+                        isRequired: false
+                        isInvalid: false
+                        fullWidth: false
+                        password: false
+                        disabled: false
+                    - component: TextField
+                      name: textField
+                      layout:
+                        columnSize: 1
+    - component: Button
+      name: button
